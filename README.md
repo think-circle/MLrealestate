@@ -19,6 +19,14 @@ curl https://cli-assets.heroku.com/install.sh | sh
 <H4> Create new App on Heroku </H4>
 heroku create ai-thinkcircle
 
+
+<H4>  Heroku Container login</H4>
+heroku create <appname>
+heroku container: login
+heroku container:push web -a <appname>
+heroku container:release web -a <appname>
+heroku logs -a <appname> --tail
+
 <H4> Update App in Heroku after you have done changes </H4>
 git add .
 git commit -m "second commit"
