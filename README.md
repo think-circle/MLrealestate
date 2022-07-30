@@ -17,7 +17,14 @@ curl https://cli-assets.heroku.com/install.sh | sh
 
 
 <H4> Create new App on Heroku </H4>
+git init
+heroku login
 heroku create ai-thinkcircle
+git add .
+git commit -m "initial commit"
+git push heroku master
+heroku ps:scale web=1
+
 
 
 <H4>  Heroku Container login</H4>
