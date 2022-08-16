@@ -4,6 +4,7 @@ ENV MODEL_NAME=model
 
 COPY /saved_models /models/model
 COPY tf_serving_entrypoint.sh /usr/bin/tf_serving_entrypoint.sh
+COPY models.config /models/models.config
 #ENV PORT=8601
 
 RUN chmod +x /usr/bin/tf_serving_entrypoint.sh

@@ -1,4 +1,4 @@
 
 #!/bin/bash
 
-tensorflow_model_server  --rest_api_port="${PORT}" --model_name="${MODEL_NAME}" --model_base_path="${MODEL_BASE_PATH}"/"${MODEL_NAME}" "$@"
+tensorflow_model_server  --rest_api_port="${PORT}" --allow_version_labels_for_unavailable_models --model_config_file=/models/models.config "$@"
